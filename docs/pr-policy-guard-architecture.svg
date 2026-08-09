@@ -1,0 +1,222 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1100" viewBox="0 0 1800 1100">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,3 L0,6 Z" fill="#475569"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.12"/>
+    </filter>
+    <style>
+      .title{font:700 30px Arial,sans-serif;fill:#0f172a}
+      .subtitle{font:400 16px Arial,sans-serif;fill:#64748b}
+      .h{font:700 18px Arial,sans-serif;fill:#0f172a}
+      .body{font:400 14px Arial,sans-serif;fill:#334155}
+      .small{font:400 12px Arial,sans-serif;fill:#64748b}
+      .input{font:600 12px Arial,sans-serif;fill:#1d4ed8}
+      .output{font:600 12px Arial,sans-serif;fill:#047857}
+      .box{stroke:#cbd5e1;stroke-width:1.5;rx:14}
+      .line{stroke:#475569;stroke-width:2.2;fill:none;marker-end:url(#arrow)}
+      .blueLine{stroke:#2563eb;stroke-width:2.4;fill:none;marker-end:url(#arrowBlue)}
+      .dash{stroke:#94a3b8;stroke-width:1.6;stroke-dasharray:7 6;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+
+  <rect width="1800" height="1100" fill="#f8fafc"/>
+  <text x="900" y="55" text-anchor="middle" class="title">PR Policy Guard — AI-Assisted Policy-as-Code Architecture</text>
+  <text x="900" y="82" text-anchor="middle" class="subtitle">Deterministic policy enforcement with AI for semantic analysis, policy retrieval, explanation and remediation</text>
+
+  <!-- Layer labels -->
+  <text x="55" y="145" class="small">SOURCE</text>
+  <text x="55" y="405" class="small">UNDERSTANDING</text>
+  <text x="55" y="680" class="small">POLICY DECISION</text>
+  <text x="55" y="925" class="small">OUTPUT &amp; PLATFORM</text>
+
+  <!-- Git Provider -->
+  <rect x="95" y="125" width="250" height="180" class="box" fill="#ffffff" filter="url(#shadow)"/>
+  <text x="220" y="158" text-anchor="middle" class="h">Git Provider</text>
+  <text x="220" y="181" text-anchor="middle" class="small">GitHub / GitLab</text>
+  <line x1="120" y1="195" x2="320" y2="195" stroke="#e2e8f0"/>
+  <text x="120" y="220" class="body">• Pull request metadata</text>
+  <text x="120" y="242" class="body">• Diff / changed files</text>
+  <text x="120" y="264" class="body">• Repository context</text>
+  <text x="120" y="286" class="output">OUTPUT → PR event + code context</text>
+
+  <!-- PR Collector -->
+  <rect x="415" y="125" width="250" height="180" class="box" fill="#eff6ff" filter="url(#shadow)"/>
+  <text x="540" y="158" text-anchor="middle" class="h">PR Collector</text>
+  <text x="540" y="181" text-anchor="middle" class="small">Webhook / Git integration</text>
+  <line x1="440" y1="195" x2="640" y2="195" stroke="#bfdbfe"/>
+  <text x="440" y="220" class="body">• Validates webhook</text>
+  <text x="440" y="242" class="body">• Fetches diff &amp; files</text>
+  <text x="440" y="264" class="body">• Builds evaluation job</text>
+  <text x="440" y="286" class="output">OUTPUT → PR snapshot</text>
+
+  <!-- Code Analyzer -->
+  <rect x="735" y="125" width="300" height="180" class="box" fill="#ffffff" filter="url(#shadow)"/>
+  <text x="885" y="158" text-anchor="middle" class="h">Code / Artifact Analyzer</text>
+  <text x="885" y="181" text-anchor="middle" class="small">Static + AST + dependency analysis</text>
+  <line x1="760" y1="195" x2="1010" y2="195" stroke="#e2e8f0"/>
+  <text x="760" y="220" class="body">• File / artifact classification</text>
+  <text x="760" y="242" class="body">• Dependencies, configs, secrets</text>
+  <text x="760" y="264" class="body">• Code patterns / AST signals</text>
+  <text x="760" y="286" class="output">OUTPUT → deterministic signals</text>
+
+  <!-- AI Semantic Analyzer -->
+  <rect x="1105" y="125" width="300" height="180" class="box" fill="#f5f3ff" filter="url(#shadow)"/>
+  <text x="1255" y="158" text-anchor="middle" class="h">AI Semantic Analyzer</text>
+  <text x="1255" y="181" text-anchor="middle" class="small">LLM reasoning over relevant code</text>
+  <line x1="1130" y1="195" x2="1380" y2="195" stroke="#ddd6fe"/>
+  <text x="1130" y="220" class="body">• Understands code intent</text>
+  <text x="1130" y="242" class="body">• Classifies data / behavior</text>
+  <text x="1130" y="264" class="body">• Finds semantic policy signals</text>
+  <text x="1130" y="286" class="output">OUTPUT → semantic signals + confidence</text>
+
+  <!-- Policy Registry -->
+  <rect x="1475" y="125" width="250" height="180" class="box" fill="#ffffff" filter="url(#shadow)"/>
+  <text x="1600" y="158" text-anchor="middle" class="h">Policy Registry</text>
+  <text x="1600" y="181" text-anchor="middle" class="small">Applicability metadata</text>
+  <line x1="1500" y1="195" x2="1700" y2="195" stroke="#e2e8f0"/>
+  <text x="1500" y="220" class="body">• Policy IDs / domains</text>
+  <text x="1500" y="242" class="body">• Applicability / signals</text>
+  <text x="1500" y="264" class="body">• Owners / versions</text>
+  <text x="1500" y="286" class="output">OUTPUT → relevant policy set</text>
+
+  <!-- arrows top -->
+  <path d="M345 215 L410 215" class="line"/>
+  <rect x="354" y="187" width="48" height="22" rx="8" fill="#dbeafe"/>
+  <text x="378" y="202" text-anchor="middle" class="input">PR event</text>
+  <path d="M665 215 L730 215" class="line"/>
+  <rect x="674" y="187" width="50" height="22" rx="8" fill="#dbeafe"/>
+  <text x="699" y="202" text-anchor="middle" class="input">snapshot</text>
+  <path d="M1035 215 L1100 215" class="blueLine"/>
+  <rect x="1043" y="187" width="50" height="22" rx="8" fill="#ede9fe"/>
+  <text x="1068" y="202" text-anchor="middle" class="input">signals</text>
+
+  <!-- Down from analyzers -->
+  <path d="M885 310 L885 365 L520 365 L520 405" class="line"/>
+  <rect x="700" y="340" width="92" height="22" rx="8" fill="#e2e8f0"/>
+  <text x="746" y="355" text-anchor="middle" class="input">code signals</text>
+  <path d="M1255 310 L1255 365 L1120 365 L1120 405" class="blueLine"/>
+  <rect x="1165" y="340" width="108" height="22" rx="8" fill="#ede9fe"/>
+  <text x="1219" y="355" text-anchor="middle" class="input">semantic signals</text>
+  <path d="M1600 310 L1600 365 L1490 365 L1490 405" class="dash"/>
+  <rect x="1505" y="340" width="90" height="22" rx="8" fill="#e2e8f0"/>
+  <text x="1550" y="355" text-anchor="middle" class="input">policy metadata</text>
+
+  <!-- Policy Input Builder -->
+  <rect x="360" y="405" width="350" height="205" class="box" fill="#ecfeff" filter="url(#shadow)"/>
+  <text x="535" y="438" text-anchor="middle" class="h">Policy Input Builder</text>
+  <text x="535" y="461" text-anchor="middle" class="small">Canonical PRPolicyInput contract</text>
+  <line x1="385" y1="475" x2="685" y2="475" stroke="#a5f3fc"/>
+  <text x="385" y="500" class="body">• Merges static + AI findings</text>
+  <text x="385" y="522" class="body">• Maps signals to policy domains</text>
+  <text x="385" y="544" class="body">• Adds repository / PR context</text>
+  <text x="385" y="566" class="body">• Produces stable JSON contract</text>
+  <text x="385" y="590" class="output">OUTPUT → validated policy input</text>
+
+  <!-- RAG -->
+  <rect x="785" y="405" width="350" height="205" class="box" fill="#fff7ed" filter="url(#shadow)"/>
+  <text x="960" y="438" text-anchor="middle" class="h">Policy RAG</text>
+  <text x="960" y="461" text-anchor="middle" class="small">Retrieve authoritative policy context</text>
+  <line x1="810" y1="475" x2="1110" y2="475" stroke="#fed7aa"/>
+  <text x="810" y="500" class="body">• Embedding / keyword retrieval</text>
+  <text x="810" y="522" class="body">• Filters by policy domain/version</text>
+  <text x="810" y="544" class="body">• Returns source sections / citations</text>
+  <text x="810" y="566" class="body">• Feeds AI explanation/remediation</text>
+  <text x="810" y="590" class="output">OUTPUT → relevant policy text</text>
+
+  <!-- Policy source -->
+  <rect x="1210" y="405" width="350" height="205" class="box" fill="#ffffff" filter="url(#shadow)"/>
+  <text x="1385" y="438" text-anchor="middle" class="h">Policy Knowledge Base</text>
+  <text x="1385" y="461" text-anchor="middle" class="small">Authoritative firm policies</text>
+  <line x1="1235" y1="475" x2="1535" y2="475" stroke="#e2e8f0"/>
+  <text x="1235" y="500" class="body">• Policy documents / standards</text>
+  <text x="1235" y="522" class="body">• Rego policies</text>
+  <text x="1235" y="544" class="body">• Approved lists / exceptions</text>
+  <text x="1235" y="566" class="body">• Versioned in Git</text>
+  <text x="1235" y="590" class="output">OUTPUT → policy content + policy data</text>
+
+  <!-- connections middle -->
+  <path d="M710 510 L780 510" class="blueLine"/>
+  <rect x="720" y="482" width="52" height="22" rx="8" fill="#dbeafe"/>
+  <text x="746" y="497" text-anchor="middle" class="input">signals</text>
+  <path d="M1385 405 L1385 375 L960 375 L960 400" class="dash"/>
+  <rect x="1130" y="350" width="70" height="22" rx="8" fill="#e2e8f0"/>
+  <text x="1165" y="365" text-anchor="middle" class="input">policies</text>
+
+  <!-- OPA -->
+  <rect x="520" y="690" width="760" height="185" class="box" fill="#eff6ff" stroke="#93c5fd" filter="url(#shadow)"/>
+  <text x="900" y="725" text-anchor="middle" class="h">OPA Policy Decision Engine</text>
+  <text x="900" y="748" text-anchor="middle" class="small">Rego evaluation — deterministic, auditable enforcement</text>
+  <line x1="550" y1="762" x2="1250" y2="762" stroke="#bfdbfe"/>
+  <text x="550" y="790" class="body">INPUT: PRPolicyInput JSON + policy bundle + policy data</text>
+  <text x="550" y="814" class="body">PROCESSING: evaluates applicable Rego rules and produces structured decisions</text>
+  <text x="550" y="838" class="body">OUTPUT: ALLOW / WARN / REVIEW / DENY + policy IDs + evidence</text>
+  <text x="550" y="862" class="small">AI never replaces the deterministic enforcement decision.</text>
+
+  <!-- arrows to OPA -->
+  <path d="M535 610 L535 655 L700 655 L700 685" class="blueLine"/>
+  <rect x="555" y="625" width="110" height="22" rx="8" fill="#dbeafe"/>
+  <text x="610" y="640" text-anchor="middle" class="input">PRPolicyInput</text>
+  <path d="M1385 610 L1385 655 L1100 655 L1100 685" class="line"/>
+  <rect x="1220" y="625" width="82" height="22" rx="8" fill="#e2e8f0"/>
+  <text x="1261" y="640" text-anchor="middle" class="input">policy data</text>
+
+  <!-- Bottom components -->
+  <rect x="95" y="925" width="300" height="120" class="box" fill="#ffffff" filter="url(#shadow)"/>
+  <text x="245" y="957" text-anchor="middle" class="h">AI Explanation &amp; Remediation</text>
+  <text x="120" y="984" class="body">Input: OPA findings + policy text + PR context</text>
+  <text x="120" y="1006" class="body">Output: explanation, fix, source citation</text>
+  <text x="120" y="1028" class="output">→ developer-friendly guidance</text>
+
+  <rect x="475" y="925" width="300" height="120" class="box" fill="#ffffff" filter="url(#shadow)"/>
+  <text x="625" y="957" text-anchor="middle" class="h">PR Check / Comment</text>
+  <text x="500" y="984" class="body">Input: final decision + explanation</text>
+  <text x="500" y="1006" class="body">Output: GitHub/GitLab status + feedback</text>
+  <text x="500" y="1028" class="output">→ ALLOW / BLOCK / REVIEW</text>
+
+  <rect x="855" y="925" width="300" height="120" class="box" fill="#ffffff" filter="url(#shadow)"/>
+  <text x="1005" y="957" text-anchor="middle" class="h">PostgreSQL + pgvector</text>
+  <text x="880" y="984" class="body">Stores: evaluations, policy versions,</text>
+  <text x="880" y="1006" class="body">exceptions, audit events, embeddings</text>
+  <text x="880" y="1028" class="output">→ state + retrieval store</text>
+
+  <rect x="1235" y="925" width="300" height="120" class="box" fill="#ffffff" filter="url(#shadow)"/>
+  <text x="1385" y="957" text-anchor="middle" class="h">OpenTelemetry</text>
+  <text x="1260" y="984" class="body">Traces: PR → analyzers → RAG → OPA → AI</text>
+  <text x="1260" y="1006" class="body">Metrics: latency, tokens, cost, violations</text>
+  <text x="1260" y="1028" class="output">→ observability / audit telemetry</text>
+
+  <!-- OPA outputs -->
+  <path d="M700 875 L700 910 L625 910 L625 920" class="line"/>
+  <rect x="635" y="882" width="88" height="22" rx="8" fill="#dcfce7"/>
+  <text x="679" y="897" text-anchor="middle" class="output">decision</text>
+
+  <path d="M1100 875 L1100 910 L1005 910 L1005 920" class="dash"/>
+  <rect x="1010" y="882" width="70" height="22" rx="8" fill="#e2e8f0"/>
+  <text x="1045" y="897" text-anchor="middle" class="small">audit data</text>
+
+  <path d="M900 875 L900 900 L245 900 L245 920" class="blueLine"/>
+  <rect x="480" y="882" width="120" height="22" rx="8" fill="#dbeafe"/>
+  <text x="540" y="897" text-anchor="middle" class="input">findings + evidence</text>
+
+  <path d="M475 985 L400 985" class="line"/>
+  <rect x="402" y="957" width="68" height="22" rx="8" fill="#dcfce7"/>
+  <text x="436" y="972" text-anchor="middle" class="output">result</text>
+
+  <!-- AI explanation to PR check -->
+  <path d="M395 985 L470 985" class="line"/>
+
+  <!-- Legend -->
+  <rect x="95" y="1070" width="1440" height="22" fill="none"/>
+  <text x="100" y="1087" class="small">Legend:</text>
+  <line x1="155" y1="1081" x2="210" y2="1081" class="blueLine"/>
+  <text x="220" y="1087" class="small">data / processing input</text>
+  <line x1="390" y1="1081" x2="445" y2="1081" class="line"/>
+  <text x="455" y="1087" class="small">component output / flow</text>
+  <line x1="625" y1="1081" x2="680" y2="1081" class="dash"/>
+  <text x="690" y="1087" class="small">supporting / metadata flow</text>
+</svg>
